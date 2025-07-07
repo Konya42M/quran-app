@@ -87,7 +87,7 @@ function displayVerses() {
 
 function toggleLanguage(language) {
     activeLanguages[language] = !activeLanguages[language];
-    const btn = document.querySelector(`.toggle-btn[onclick="toggleLanguage('${language}')"]`);
+    const btn = document.getElementById(`toggle-${language}`);
     btn.classList.toggle('active');
     displayVerses();
 }
