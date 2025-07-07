@@ -217,6 +217,7 @@ function generateSummary(results, query) {
 
 window.onload = function() {
 loadJSON();
+document.getElementById('suraSelect').addEventListener('change', readQuran);
 };
 
-document.getElementById('suraSelect').addEventListener('change', readQuran);
+
