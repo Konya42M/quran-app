@@ -216,10 +216,7 @@ function generateSummary(results, query) {
 }
 
 window.onload = function() {
-    const loadButton = document.createElement('button');
-    loadButton.textContent = 'JSON Dosyasını Yükle';
-    loadButton.onclick = loadJSON;
-    document.body.insertBefore(loadButton, document.body.firstChild);
+loadJSON();
 };
 
 document.getElementById('suraSelect').addEventListener('change', readQuran);
