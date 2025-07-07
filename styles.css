@@ -1,0 +1,291 @@
+:root {
+    --primary-color: #1b5e20;
+    --secondary-color: #e8f5e9;
+    --text-color: #333;
+    --border-color: #a5d6a7;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-family: 'Amiri', serif;
+}
+
+.main-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+select, input, button {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+select {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2e7d32;
+}
+
+.quran-text {
+    font-family: 'Amiri', serif;
+    font-size: 24px;
+    line-height: 2;
+    text-align: justify;
+    padding: 20px;
+    background-color: #f1f8e9;
+    border-radius: 8px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.arabic {
+    direction: rtl;
+}
+
+.turkish {
+    direction: rtl;
+    font-size: 18px;
+    color: #333;
+}
+
+.verse {
+    display: inline;
+}
+
+.verse-number {
+    display: inline-block;
+    font-size: 14px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.dual-language .verse {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.bookmarked {
+    background-color: #c8e6c9;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    background-color: #ddd;
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#bookmarkStatus {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+.go-to-verse {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.go-to-verse input {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+    border-bottom-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+}
+
+#detailedSummary {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#detailedSummary h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#detailedSummary ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#turkishTranslations {
+    margin-top: 20px;
+}
+
+.translation-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #1b5e20;
+}
+
+.translation-item p {
+    margin: 5px 0;
+}
+
+.translation-item .verse-info {
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#searchSummary {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#topSuras {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#topSuras h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#topSuras ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.search-result {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #1b5e20;
+}
+
+.search-result .arabic {
+    font-family: 'Amiri', serif;
+    font-size: 24px;
+    direction: rtl;
+    margin-bottom: 10px;
+}
+
+.search-result .turkish {
+    font-size: 16px;
+}
+
+.search-result .verse-info {
+    font-weight: bold;
+    color: #1b5e20;
+    margin-top: 10px;
+}

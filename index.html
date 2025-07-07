@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuran Okuma ve Arama</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kuran Okuma ve Arama</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="controls">
+                <select id="suraSelect"></select>
+                <button onclick="setBookmark()">Yer İmi Ekle</button>
+            </div>
+            <div class="go-to-verse">
+                <input type="number" id="verseInput" placeholder="Ayet No">
+                <button onclick="goToVerse()">Git</button>
+            </div>
+            <div class="toggle-container">
+                <button class="toggle-btn active" onclick="toggleLanguage('arabic')">Arapça</button>
+                <button class="toggle-btn active" onclick="toggleLanguage('turkish')">Türkçe</button>
+            </div>
+            <div id="quranContent" class="quran-text"></div>
+            <div class="pagination">
+                <button onclick="changePage(-1)">Önceki Sayfa</button>
+                <button onclick="changePage(1)">Sonraki Sayfa</button>
+            </div>
+            <div id="bookmarkStatus"></div>
+
+            <div class="tabs">
+                <div class="tab active" onclick="openTab(event, 'readTab')">Oku</div>
+                <div class="tab" onclick="openTab(event, 'searchTab')">Ara</div>
+            </div>
+
+            <div id="readTab" class="tab-content active"></div>
+
+            <div id="searchTab" class="tab-content">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Aranacak kelime veya cümle">
+                    <button onclick="search()">Ara</button>
+                </div>
+                <div id="searchSummary"></div>
+                <div id="topSuras"></div>
+                <h3>Arama Sonuçları</h3>
+                <div id="searchResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
