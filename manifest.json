@@ -1,0 +1,20 @@
+{
+  "name": "Quran Türkisch",
+  "short_name": "QuranApp",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#2E4267",
+  "background_color": "#232F46",
+  "icons": [
+    {
+      "src": "icon-2.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-1.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
