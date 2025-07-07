@@ -6,27 +6,23 @@ let currentPage = 1;
 const versesPerPage = 10;
 
 function loadJSON() {
-    const fileInput = document.createElement('input');
-    fileInput.type = 'file';
-    fileInput.accept = 'application/json';
-    fileInput.onchange = function(event) {
-        const file = event.target.files[0];
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            try {
-                quranData = JSON.parse(e.target.result);
-                populateSuraSelect();
-                loadBookmark();
-                alert('JSON dosyası başarıyla yüklendi!');
-            } catch (error) {
-                console.error("JSON parsing error:", error);
-                alert('JSON dosyası yüklenirken bir hata oluştu.');
-            }
-        };
-        reader.readAsText(file);
-    };
-    fileInput.click();
+    fetch('quran_tr.json')
+        .then(response => {
+            if (!response.ok) throw new Error('HATA!');
+            return response.json();
+        })
+        .then(data => {
+            quranData = data;
+            populateSuraSelect();
+            loadBookmark();
+            alert('JSON-File wurde automatisch geladen!');
+        })
+        .catch(error => {
+            console.error("Fehler beim Laden der JSON:", error);
+            alert('Fehler beim Laden der JSON-Datei.');
+        });
 }
+
 
 function populateSuraSelect() {
     const select = document.getElementById('suraSelect');
